@@ -34,10 +34,16 @@ FoodsController.prototype.selectFood = function (food, list) {
 }
 
 FoodsController.prototype.openFoodDetails = function (event, food) {
+    var htmlContentValue = '';
+    
+    angular.forEach(food.macros, function(macroValue, macroTitle) {
+        htmlContentValue += '<div>' + _.toUpper(macroTitle) + ' : ' + '<b>' + macroValue + '</b>' + '</div>';
+    });
+    
     this.mdDialog.show(
         this.mdDialog.alert()
             .title(food.title)
-            .textContent('Macro values here')
+            .htmlContent(htmlContentValue)
             .ariaLabel('Food info')
             .ok('Close')
             .targetEvent(event)

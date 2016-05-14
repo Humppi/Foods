@@ -6,6 +6,7 @@
  *  title,
  *  weight (null = no poll, empty string = poll),
  *  macro values {
+ *      kcal,
  *      protein,
  *      carbs,
  *      fat,
@@ -21,15 +22,33 @@ function FoodsService() {
     var _myFoods = [
         {
             title : 'Fit rahka, koska lifestyle',
-            weight : null
+            weight : null,
+            macros : {
+                kcal : 120,
+                protein : 20,
+                carbohydrates : 8,
+                fat : 0.6
+            }
         },
         {
-            title : 'Mass night prode',
-            weight : null
+            title : 'Mass triple night (25g)',
+            weight : null,
+            macros : {
+                kcal : 97,
+                protein : 21.11,
+                carbohydrates : 1.14,
+                fat : 0.79
+            }
         },
         {
             title : 'Kariniemen kananpojan minuuttipihvi (yrtti/vsipuli)',
-            weight : ''
+            weight : '',
+            macros : {
+                kcal : 120,
+                protein : 20,
+                carbohydrates : 0.7,
+                fat : 4.3
+            }
         }
     ];
 
