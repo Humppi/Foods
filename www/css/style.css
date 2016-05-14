@@ -1,0 +1,25 @@
+.Header-settings {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.Page {
+	padding: 1em 0.5em;
+}
+
+.centered {
+	text-align: center;
+}
+
+.Settings-inputLabel {
+	color: black;
+}
+
+.Settings-input {
+	border-bottom-color: black !important;
+}
+
+.Foods-list {
+	margin-bottom: 1em;
+}

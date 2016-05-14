@@ -1,0 +1,25 @@
+<div class="Page">
+
+    <div layout="row">
+        <div class="centered" flex>
+            <h3>Overview</h3>
+            <p>{{ 'Your last given weight : ' + ctrl.settings.weight + 'kg' + ' on [datePlaceholder]'}}</p>
+        </div>
+    </div>
+
+    <div layout="row">
+        <div class="Page-content-wrapper" flex>
+            <div class="Foods-list">
+                <md-list-item ng-repeat="food in ctrl.dailyFoods">
+                    <md-checkbox ng-click="ctrl.selectFood(food, ctrl.selectedDailyFoods)"></md-checkbox>
+                    <p>{{food.title}}</p>
+                </md-list-item>
+            </div>
+            <section layout="row" layout-align="center center" layout-wrap>
+                <md-button ng-if="ctrl.dailyFoods.length > 0" ng-disabled="ctrl.buttonDisabledStates.remove" ng-click="ctrl.removeSelectedDailyFoods()"
+                    class="md-raised md-warn">Remove selected</md-button>
+                <p ng-if="!ctrl.dailyFoods.length > 0">{{'No foods added for today.'}}</p>
+            </section>
+        </div>
+    </div>
+</div>

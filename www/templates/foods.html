@@ -1,0 +1,25 @@
+<div class="Page">
+
+    <div layout="row">
+        <div class="centered" flex>
+            <h3>Foods</h3>
+        </div>
+    </div>
+
+    <div layout="row">
+        <div class="Page-content-wrapper" flex>
+            <div class="Foods-list">
+                <md-list-item ng-repeat="food in ctrl.foods">
+                    <md-checkbox ng-click="ctrl.selectFood(food, ctrl.selectedFoods)"></md-checkbox>
+                    <p>{{food.title}}</p>
+                    <md-icon class="md-secondary" ng-click="ctrl.openFoodDetails($event, food)" aria-label="Chat" md-svg-icon="info"></md-icon>
+                </md-list-item>
+            </div>
+            <section class="Foods-buttons" layout="row" layout-align="center center" layout-wrap>
+                <md-button ng-disabled="ctrl.buttonDisabledStates.add" ng-click="ctrl.addDailyFoods()" class="md-raised md-primary">Add to daily</md-button>
+                <md-button ng-disabled="ctrl.buttonDisabledStates.remove" ng-click="ctrl.removeSelectedFoods()" class="md-raised md-warn">Remove selected</md-button>
+                <md-button ng-click="ctrl.addNewFood()" class="md-raised md-primary">Add a new food</md-button>
+            </section>
+        </div>
+    </div>
+</div>

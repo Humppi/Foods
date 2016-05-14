@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>Foods</title>
+
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	<link href="lib/angular-material/angular-material.min.css" rel="stylesheet">
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+	<link href="css/ionic.app.css" rel="stylesheet">
+-->
+
+	<!-- ionic/angularjs js -->
+	<script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+	<script src="lib/angular-animate/angular-animate.min.js"></script>
+	<script src="lib/angular-aria/angular-aria.min.js"></script>
+	<script src="lib/angular-messages/angular-messages.min.js"></script>
+	<script src="lib/angular-material/angular-material.min.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<!-- Other -->
+	<script src="lib/lodash/dist/lodash.min.js"></script>
+
+
+	<!-- cordova script (this will be a 404 during development) -->
+	<script src="cordova.js"></script>
+
+	<!-- your app's js -->
+	<script src="js/app.js"></script>
+	<script src="js/overview/OverviewController.js"></script>
+	<script src="js/foods/FoodsController.js"></script>
+	<script src="js/foods/FoodsService.js"></script>
+	<script src="js/settings/SettingsService.js"></script>
+	<script src="js/settings/SettingsController.js"></script>
+	<script src="js/header/HeaderController.js"></script>
+</head>
+
+<body ng-app="Foods">
+	<div ng-cloak>
+		<md-content>
+			<md-tabs md-border-bottom md-stretch-tabs="always">
+				<md-tab id="overview" ui-sref="overview">
+					<md-tab-label>
+						<md-icon md-svg-icon="home" aria-label="home"></md-icon>
+					</md-tab-label>
+				</md-tab>
+				<md-tab id="foods" ui-sref="foods">
+					<md-tab-label>
+						<md-icon md-svg-icon="foods" aria-label="foods"></md-icon>
+					</md-tab-label>
+				</md-tab>
+				<md-tab id="settings" ui-sref="settings">
+					<md-tab-label>
+						<md-icon md-svg-icon="settings" aria-label="settings"></md-icon>
+					</md-tab-label>
+				</md-tab>
+			</md-tabs>
+		</md-content>
+	</div>
+
+	<div ui-view></div>
+</body>
+
+</html>
